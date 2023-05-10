@@ -1,0 +1,68 @@
+{
+    "name": "moeen-khan/multi-auth",
+    "description": "Laravel Multi Authentication",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "multi",
+        "auth"
+    ],
+    "authors": [
+        {
+            "name": "Moeen Khan",
+            "email": "moeenkhan028@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/auth": "^10.0",
+        "illuminate/console": "^10.0",
+        "illuminate/notifications": "^10.0",
+        "illuminate/routing": "^10.0",
+        "illuminate/support": "^10.0"
+    },
+    "require-dev": {
+        "code-lts/doctum": "^5.5",
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "orchestra/testbench": "^8.0",
+        "phpunit/phpunit": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Moeen\\MultiAuth\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Moeen\\MultiAuth\\Test\\": "tests/"
+        }
+    },
+    "suggest": {
+        "inertiajs/inertia-laravel": "The Laravel adapter for Inertia.js.",
+        "laravel/breeze": "Min. Laravel auth scaffolding with Blade and Tailwind.",
+        "tightenco/ziggy": "Use your Laravel named routes in Javascript"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "cs-fix": "php-cs-fixer fix",
+        "cs-lint": "php-cs-fixer fix --dry-run",
+        "doc": "doctum.php update doctum.php -v",
+        "test": "phpunit",
+        "test-coverage": "phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "12.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Moeen\\MultiAuth\\MultiAuthServiceProvider"
+            ]
+        }
+    }
+}
